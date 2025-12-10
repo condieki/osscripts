@@ -178,6 +178,7 @@ migrate_index() {
     local cmd="elasticdump \
         --input=\"${source_auth}/${idx}\" \
         --output=\"${target_auth}/${idx}\" \
+        --scrollTime=10m \
         --type=data \
         --limit=10000 \
         --noRefresh \
